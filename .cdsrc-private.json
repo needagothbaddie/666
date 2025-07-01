@@ -1,0 +1,48 @@
+{
+  "requires": {
+    "db": {
+      "binding": {
+        "type": "cf",
+        "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+        "org": "9dfc27f9trial",
+        "space": "dev",
+        "instance": "punching-air",
+        "key": "SharedDevKey"
+      },
+      "kind": "hana-cloud",
+      "vcap": {
+        "name": "db"
+      }
+    },
+    "[hybrid]": {
+      "db": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "9dfc27f9trial",
+          "space": "dev",
+          "instance": "punching-air",
+          "key": "SharedDevKey"
+        },
+        "kind": "hana",
+        "vcap": {
+          "name": "db"
+        }
+      },
+      "auth": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "9dfc27f9trial",
+          "space": "dev",
+          "instance": "JavaAuth",
+          "key": "mykey"
+        },
+        "kind": "xsuaa-auth",
+        "vcap": {
+          "name": "auth"
+        }
+      }
+    }
+  }
+}

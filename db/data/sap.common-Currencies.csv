@@ -1,0 +1,13 @@
+code,symbol,minorUnit,name,descr
+USD,$,2,US Dollar,United States Dollar
+EUR,€,2,Euro,European Union Euro
+JPY,¥,0,Japanese Yen,Japan's official currency
+GBP,£,2,Pound Sterling,United Kingdom Pound
+AUD,$,2,Australian Dollar,Australia's official currency
+CAD,$,2,Canadian Dollar,Canada's official currency
+CHF,Fr.,2,Swiss Franc,Switzerland's official currency
+CNY,¥,2,Renminbi,Chinese Yuan (RMB)
+SEK,kr,2,Swedish Krona,Sweden's official currency
+NZD,$,2,New Zealand Dollar,New Zealand's official currency
+VND,đ,0,Vietnam, Vietnam's official currency
+KRW,W,0,South Korea, South Korea's Won

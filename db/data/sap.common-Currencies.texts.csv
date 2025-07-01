@@ -1,0 +1,26 @@
+code,locale,name,descr
+EUR,de,Euro,European Euro
+USD,de,US-Dollar,United States Dollar
+CAD,de,Kanadischer Dollar,Kanadischer Dollar
+AUD,de,Australischer Dollar,Australischer Dollar
+GBP,de,Pfund,Britische Pfund
+ILS,de,Schekel,Israelische Schekel
+EUR,fr,euro,de la Zone euro
+USD,fr,dollar,dollar des États-Unis
+CAD,fr,dollar canadien,dollar canadien
+AUD,fr,dollar australien,dollar australien
+GBP,fr,livre sterling,pound sterling
+ILS,fr,Shekel,shekel israelien
+EUR,en,Euro,European Euro
+USD,en,US Dollar,United States Dollar
+CAD,en,Canadian Dollar,Canadian Dollar
+AUD,en,Australian Dollar,Australian Dollar
+GBP,en,Pound Sterling,British Pound Sterling
+ILS,en,Shekel,Israeli Shekel
+EUR,vi,Euro,Đồng Euro Châu Âu
+USD,vi,Đô la Mỹ,Đô la Hoa Kỳ
+CAD,vi,Đô la Canada,Đô la Canada
+AUD,vi,Đô la Úc,Đô la Úc
+GBP,vi,Bảng Anh,Bảng Anh
+ILS,vi,Shekel,Đồng Shekel Israel
+KRW,en,Won, Korea Won

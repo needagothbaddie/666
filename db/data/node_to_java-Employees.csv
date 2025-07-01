@@ -1,0 +1,16 @@
+ID,email,firstName,lastName,gender,hireDate,department_ID,companyCode,dateOfBirth,salary,role_ID,currency_code
+71da4591-7908-4c36-afba-a1d679576fb4,alice.smith@example.com,Alice,Smith,true,2021-04-12,589a80cf-d6a5-46a3-bd8b-903d80aad5d7,US01,1990-05-24,50000,e6c221f4-bfb2-4031-816f-462f35f9f245,USD
+7f868acb-f7e3-46fc-b861-da1fab13e291,bob.johnson@example.com,Bob,Johnson,false,2020-06-23,589a80cf-d6a5-46a3-bd8b-903d80aad5d7,US01,1985-11-02,70000,c1fb9ff2-ce05-40dd-99fd-e1068e5092df,USD
+ad5acafd-f338-4974-a6b3-98602df23e05,charlie.lee@example.com,Charlie,Lee,false,2019-10-01,9bbffde1-5e19-40cc-b2dc-e289b0e2d383,US01,1992-03-17,40000,6a6c5123-dc0d-4b72-a240-02413a51bbaf,USD
+2507b7b9-914c-4a95-8563-927aeff51840,diana.miller@example.com,Diana,Miller,true,2022-01-15,9bbffde1-5e19-40cc-b2dc-e289b0e2d383,US01,1988-09-08,70000,c1fb9ff2-ce05-40dd-99fd-e1068e5092df,USD
+ef1c8b3e-8bcc-432e-a00a-0201ae171e09,ethan.garcia@example.com,Ethan,Garcia,false,2018-03-29,589a80cf-d6a5-46a3-bd8b-903d80aad5d7,US01,1987-07-14,50000,e6c221f4-bfb2-4031-816f-462f35f9f245,USD
+b5a5efac-09f4-4f45-9140-fc247a768c43,susan.jenkins@example.com,Susan,Jenkins,true,2020-08-19,589a80cf-d6a5-46a3-bd8b-903d80aad5d7,US01,1983-12-05,70000,c1fb9ff2-ce05-40dd-99fd-e1068e5092df,USD
+f2ff5c8a-2577-4b4f-b3b5-e517b882e5c6,robert.thomas@example.com,Robert,Thomas,false,2019-04-11,9bbffde1-5e19-40cc-b2dc-e289b0e2d383,US01,1975-11-23,50000,e6c221f4-bfb2-4031-816f-462f35f9f245,USD
+8f0cbcc9-3102-4b0f-8473-1b7c842e01dc,carol.murphy@example.com,Carol,Murphy,true,2018-09-30,589a80cf-d6a5-46a3-bd8b-903d80aad5d7,US01,1987-02-14,60000,6a6c5123-dc0d-4b72-a240-02413a51bbaf,USD
+abe62b58-1cf6-46b3-86b7-370a7f58c01b,james.watson@example.com,James,Watson,false,2022-03-15,9bbffde1-5e19-40cc-b2dc-e289b0e2d383,US01,1985-01-19,50000,e6c221f4-bfb2-4031-816f-462f35f9f245,USD
+a9c73db2-8c84-4e57-bfb8-847d6a79f91b,linda.brown@example.com,Linda,Brown,true,2021-06-10,589a80cf-d6a5-46a3-bd8b-903d80aad5d7,US01,1990-09-22,60000,6a6c5123-dc0d-4b72-a240-02413a51bbaf,USD
+d877660e-6f2c-403b-a3e8-507b59db7458,michael.evans@example.com,Michael,Evans,false,2023-01-05,9bbffde1-5e19-40cc-b2dc-e289b0e2d383,US01,1980-04-06,70000,c1fb9ff2-ce05-40dd-99fd-e1068e5092df,USD
+4a8f5b5a-3134-4c45-bc31-624e453a438a,nancy.clark@example.com,Nancy,Clark,true,2020-12-20,589a80cf-d6a5-46a3-bd8b-903d80aad5d7,US01,1993-03-29,50000,e6c221f4-bfb2-4031-816f-462f35f9f245,USD
+d9b496d5-4f2c-4ad6-bf4f-cb114a6b9a76,william.lee@example.com,William,Lee,false,2017-11-01,9bbffde1-5e19-40cc-b2dc-e289b0e2d383,US01,1984-06-17,60000,6a6c5123-dc0d-4b72-a240-02413a51bbaf,USD
+2a402d47-57cd-4d33-8ec7-8ab3249b6b3e,jennifer.martin@example.com,Jennifer,Martin,true,2019-05-22,589a80cf-d6a5-46a3-bd8b-903d80aad5d7,US01,1989-08-11,50000,e6c221f4-bfb2-4031-816f-462f35f9f245,USD
+c6165cc2-b740-4db0-9f2b-d52bd2904f11,jason.hughes@example.com,Jason,Hughes,false,2021-09-14,9bbffde1-5e19-40cc-b2dc-e289b0e2d383,US01,1991-10-30,70000,c1fb9ff2-ce05-40dd-99fd-e1068e5092df,USD

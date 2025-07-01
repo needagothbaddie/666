@@ -1,0 +1,46 @@
+### Define variables
+@baseUrl = http://localhost:8080/odata/v4/MyService
+
+### GET Employees
+GET {{baseUrl}}/Employees
+# Authorization: Bearer {{token}}
+Accept: application/json
+
+### POST Employee
+POST {{baseUrl}}/Employees
+Content-Type: application/json
+Authorization: Basic system:
+
+{
+    "email": "sau.chin@example.com",
+    "firstName": "Sau",
+    "lastName": "Chin",
+    "gender": true,
+    "hireDate": "2022-01-15",
+    "department_ID": "9bbffde1-5e19-40cc-b2dc-e289b0e2d383",
+    "companyCode": "US01",
+    "dateOfBirth": "1988-09-08",
+    "role_ID": "c1fb9ff2-ce05-40dd-99fd-e1068e5092df",
+    "currency_code": "USD"
+}
+
+### GET single Employees
+GET {{baseUrl}}/Employees/15ebc88e-d548-4a09-bf7e-15e295163a89
+# Authorization: Bearer {{token}}
+Accept: application/json
+
+### calculate Employees
+POST {{baseUrl}}/calSalary
+# Authorization: Bearer {{token}}
+Authorization: Basic system:
+Content-Type: application/json
+
+{
+    "id": "c6165cc2-b740-4db0-9f2b-d52bd2904f11"
+}
+
+### GET single Employees
+GET {{baseUrl}}/whoami
+# Authorization: Bearer {{token}}
+Authorization: Basic system:
+Accept: application/json
