@@ -1,0 +1,1 @@
+{"version":3,"file":"RoleList.controller.js","names":["sap","ui","define","BaseController","router","extend","onInit","this","getOwnerComponent","getRouter"],"sources":["RoleList-dbg.controller.js"],"mappings":"AAAAA,IAAIC,GAAGC,OAAO,CAAC,8BAAgCC,IAC3C,aACA,IAAIC,EACJ,OAAOD,EAAeE,OAAO,4BAA6B,CACtD,MAAAC,GACIF,EAASG,KAAKC,oBAAoBC,WACtC","ignoreList":[]}

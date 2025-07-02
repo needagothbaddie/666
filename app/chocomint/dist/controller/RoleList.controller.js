@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],e=>{"use strict";let t;return e.extend("chernobyl.controller.Role",{onInit(){t=this.getOwnerComponent().getRouter()}})});
+//# sourceMappingURL=RoleList.controller.js.map

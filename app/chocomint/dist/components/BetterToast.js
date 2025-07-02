@@ -1,0 +1,2 @@
+sap.ui.define(["sap/m/MessageToast"],function(s){"use strict";s.success=function(s){this.show(s);$(".sapMMessageToast").addClass("betterToastSucc iconAdded")};s.error=function(s){this.show(s);$(".sapMMessageToast").addClass("betterToastErr iconAdded")};return s});
+//# sourceMappingURL=BetterToast.js.map

@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/model/json/JSONModel","sap/ui/Device"],function(e,n){"use strict";return{createDeviceModel:function(){var o=new e(n);o.setDefaultBindingMode("OneWay");return o},async createUserModel(){const n=new sap.ui.model.odata.v4.ODataModel({serviceUrl:"/odata/v4/MyService/",synchronizationMode:"None",operationMode:"Server"});let o=n.bindContext("/whoami(...)");let t=false;await o.invoke().catch(e=>{console.log(e)});const a=o.getBoundContext().getObject();t=a.role.includes("AdminJava");return new e({isAdmin:t})}}});
+//# sourceMappingURL=models.js.map

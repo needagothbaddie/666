@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/UIComponent","chocomint/model/models"],(e,t)=>{"use strict";return e.extend("chocomint.Component",{metadata:{manifest:"json",interfaces:["sap.ui.core.IAsyncContentCreation"]},async init(){e.prototype.init.apply(this,arguments);this.setModel(t.createDeviceModel(),"device");this.getRouter().initialize();try{jQuery.sap.require("sap.ushell.cpv2.services.cloudServices.SiteService")}catch(e){console.log(e)}const i=await t.createUserModel();this.setModel(i,"user")}})});
+//# sourceMappingURL=Component.js.map

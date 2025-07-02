@@ -21,7 +21,6 @@ cds:
     security:
         xsuaa:
             enabled: true
-            binding: JavaAuth
 ---
 management:
     endpoint:
@@ -32,18 +31,16 @@ management:
     endpoints:
         web:
             exposure:
-                # include: health
-                include: "*"
+                include: health
     health:
         defaults:
-            enabled: true
+            enabled: false
         ping:
             enabled: true
         db:
             enabled: true
 ---
 spring:
-    profiles:
-        active: default
-server:
-    port: 4004
+    profiles.active: cloud
+cds:
+    index-page.enabled: true

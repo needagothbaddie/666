@@ -1,0 +1,46 @@
+<mvc:View
+    controllerName="chocomint.controller.App"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt"
+>
+    <tnt:ToolPage id="toolPage">
+        <tnt:header>
+            <tnt:ToolHeader id="Toolheader">
+                <Image
+                    id="ImgBrand"
+                    src="./images/brand.jpg"
+                    press="onNavHome"
+                />
+                <Button
+                    id="BtnBrand"
+                    text="Hello Kitty"
+                    press="onNavHome"
+                />
+                <ToolbarSpacer id="ToolbarSpace" />
+                <Button
+                    id="BtnEmpl"
+                    text="Employees"
+                    press="onNavHome"
+                    icon="sap-icon://employee"
+                />
+                <Button
+                    id="BtnRole"
+                    text="Roles"
+                    press="onNavRole"
+                    icon="sap-icon://role"
+                />
+                <Button
+                    id="BtnDept"
+                    text="Department"
+                    press="onNavDept"
+                    icon="sap-icon://building"
+                />
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:mainContents>
+            <App id="app" />
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

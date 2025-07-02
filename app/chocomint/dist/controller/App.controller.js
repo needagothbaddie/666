@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller","chocomint/utils/constants"],(o,n)=>{"use strict";let t;return o.extend("chocomint.controller.App",{onInit(){t=this.getOwnerComponent().getRouter()},onNavHome(o){t.navTo(n.EMPLOYEE_LIST)},onNavRole(o){t.navTo(n.ROLE_LIST)},onNavDept(){t.navTo(n.DEPT_LIST)}})});
+//# sourceMappingURL=App.controller.js.map

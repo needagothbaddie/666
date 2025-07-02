@@ -1,0 +1,1 @@
+{"version":3,"file":"NameFormatter.js","names":["sap","ui","define","fullname","firstName","lastName"],"sources":["NameFormatter-dbg.js"],"mappings":"AAAAA,IAAIC,GAAGC,OAAO,GAAI,WACd,aAEA,MAAO,CACHC,SAAU,CAACC,EAAWC,IACX,GAAGD,KAAaC,IAGnC","ignoreList":[]}

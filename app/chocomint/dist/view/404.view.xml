@@ -1,0 +1,14 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="chocomint.controller.404"
+>
+    <Page
+        title="Page Not Found"
+        showHeader="false"
+    >
+        <content>
+            <Image src="./images/404.jpg" />
+        </content>
+    </Page>
+</mvc:View>

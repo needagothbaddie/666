@@ -1,0 +1,178 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <f:Form
+        id="FormEmplDetail"
+        class="sapUiTinyMargin"
+    >
+        <f:title>
+            <core:Title text="Employee Information" />
+        </f:title>
+        <f:layout>
+            <f:ResponsiveGridLayout
+                adjustLabelSpan="true"
+                columnsXL="2"
+                columnsL="2"
+                columnsM="1"
+                emptySpanXL="0"
+                emptySpanL="0"
+                emptySpanM="0"
+                emptySpanS="0"
+                singleContainerFullSize="true"
+            />
+        </f:layout>
+        <f:formContainers>
+            <f:FormContainer id="EmplCol1">
+                <f:formElements>
+                    <f:FormElement label="Name">
+                        <f:fields>
+                            <Input
+                                id="InEmpFirstName"
+                                value="{firstName}"
+                                required="true"
+                                fieldGroupIds="isRequired"
+                                placeholder="First Name"
+                                editable="{user>/isAdmin}"
+                            />
+                            <Input
+                                id="InEmpName"
+                                value="{lastName}"
+                                required="true"
+                                fieldGroupIds="isRequired"
+                                placeholder="Last Name"
+                                editable="{user>/isAdmin}"
+                            />
+                        </f:fields>
+                    </f:FormElement>
+                    <f:FormElement label="Gender">
+                        <f:fields>
+                            <Select
+                                id="SelEmpGender"
+                                selectedKey="{path: 'gender', type: 'sap.ui.model.type.Boolean'}"
+                                required="true"
+                                fieldGroupIds="isRequired"
+                                forceSelection="false"
+                                editable="{user>/isAdmin}"
+                            >
+                                <items>
+                                    <core:Item
+                                        key="{= false}"
+                                        text="Male"
+                                    />
+                                    <core:Item
+                                        key="{= true}"
+                                        text="Female"
+                                    />
+                                </items>
+                            </Select>
+                        </f:fields>
+                    </f:FormElement>
+                </f:formElements>
+                <f:FormElement label="Department">
+                    <Select
+                        id="SelDept"
+                        items="{/Departments}"
+                        selectedKey="{department_ID}"
+                        required="true"
+                        fieldGroupIds="isRequired"
+                        forceSelection="false"
+                        editable="{user>/isAdmin}"
+                    >
+                        <items>
+                            <core:Item
+                                text="{name}"
+                                key="{ID}"
+                            />
+                        </items>
+                    </Select>
+                </f:FormElement>
+                <f:FormElement label="Level">
+                    <Select
+                        id="SelLevel"
+                        selectedKey="{role_ID}"
+                        required="true"
+                        items="{/Roles}"
+                        fieldGroupIds="isRequired"
+                        forceSelection="false"
+                        editable="{user>/isAdmin}"
+                    >
+                        <core:Item
+                            text="{name}"
+                            key="{ID}"
+                        />
+                    </Select>
+                </f:FormElement>
+            </f:FormContainer>
+            <f:FormContainer id="EmplCol2">
+                <f:FormElement label="Date of Birth">
+                    <DatePicker
+                        valueFormat="yyyy-MM-dd"
+                        id="DateDob"
+                        value="{dateOfBirth}"
+                        required="true"
+                        fieldGroupIds="isRequired"
+                        editable="{user>/isAdmin}"
+                    />
+                </f:FormElement>
+                <f:formElements>
+                    <f:FormElement label="Working From">
+                        <DatePicker
+                            id="DateHire"
+                            value="{hireDate}"
+                            required="true"
+                            fieldGroupIds="isRequired"
+                            valueFormat="yyyy-MM-dd"
+                            editable="{user>/isAdmin}"
+                        />
+                    </f:FormElement>
+                    <f:FormElement label="Email">
+                        <Input
+                            id="InEmail"
+                            valueStateText="E-mail must be a valid email address."
+                            value="{ path: 'email' }"
+                            fieldGroupIds="isRequired"
+                            required="true"
+                            editable="{user>/isAdmin}"
+                        />
+                    </f:FormElement>
+                    <f:FormElement label="Salary">
+                        <Input
+                            id="InSalary"
+                            editable="false"
+                            value="{salary}"
+                            placeholder="Salary"
+                            valueState="Information"
+                            tooltip="Salary will be calculated instead of being entered manually."
+                            valueStateText="Salary will be calculated instead of being entered manually."
+                        >
+                            <layoutData>
+                                <f:ColumnElementData
+                                    cellsLarge="12"
+                                    cellsSmall="3"
+                                />
+                            </layoutData>
+                        </Input>
+                        <Input
+                            id="InCurrency"
+                            class="float-right fit-container"
+                            value="{currency_code}"
+                            placeholder="Currency"
+                            showSuggestion="true"
+                            suggestionItems="{/Currencies}"
+                            editable="{user>/isAdmin}"
+                        >
+                            <suggestionItems>
+                                <core:ListItem
+                                    text="{code}"
+                                    additionalText="{name}"
+                                />
+                            </suggestionItems>
+                        </Input>
+                    </f:FormElement>
+                </f:formElements>
+            </f:FormContainer>
+        </f:formContainers>
+    </f:Form>
+</core:FragmentDefinition>

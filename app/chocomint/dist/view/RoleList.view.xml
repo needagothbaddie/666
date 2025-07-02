@@ -1,0 +1,57 @@
+<mvc:View
+    controllerName="chocomint.controller.RoleList"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table"
+>
+    <Page
+        showHeader="false"
+        class="sapUiContentPadding"
+    >
+        <content>
+            <table:Table
+                id="RoleTable"
+                rows="{path: '/Roles',
+                        parameters: {
+                            $$operationMode : 'Server'
+                        }}"
+                enableSelectAll="false"
+                selectionMode="MultiToggle"
+                rowActionCount="0"
+                enableCellFilter="true"
+                alternateRowColors="true"
+                rowMode="Auto"
+            >
+                <table:extension>
+                    <OverflowToolbar>
+                        <Title text="Roles" />
+                        <ToolbarSpacer />
+                    </OverflowToolbar>
+                </table:extension>
+                <table:columns>
+                    <table:Column autoResizable="true">
+                        <Label text="Role" />
+                        <table:template>
+                            <Text text="{name}" />
+                        </table:template>
+                    </table:Column>
+                    <table:Column autoResizable="true">
+                        <Label text="Base Salary" />
+                        <table:template>
+                            <Text text="{baseSalary}" />
+                        </table:template>
+                    </table:Column>
+                    <table:Column autoResizable="true">
+                        <Label text="Currency" />
+                        <table:template>
+                            <Text text="{currency_code}" />
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+            </table:Table>
+        </content>
+    </Page>
+</mvc:View>

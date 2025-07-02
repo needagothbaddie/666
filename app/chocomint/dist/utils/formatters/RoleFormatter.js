@@ -1,0 +1,2 @@
+sap.ui.define([],function(){"use strict";return{indicator:e=>{let a;switch(e){case"Analyst":a="Indication04";break;case"Manager":a="Indication05";break;case"Developer":a="Indication07";break;default:a="Indication02"}return a}}});
+//# sourceMappingURL=RoleFormatter.js.map

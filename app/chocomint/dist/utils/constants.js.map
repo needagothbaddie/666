@@ -1,0 +1,1 @@
+{"version":3,"file":"constants.js","names":["sap","ui","define","EMPLOYEE_FORM","EMPLOYEE_LIST","EMPLOYEE_INFO","DEPT_LIST","ROLE_LIST"],"sources":["constants-dbg.js"],"mappings":"AAAAA,IAAIC,GAAGC,OAAO,GAAI,WACd,aAEA,MAAO,CACHC,cAAe,aACfC,cAAe,WACfC,cAAe,aACfC,UAAW,WACXC,UAAW,WAEnB","ignoreList":[]}

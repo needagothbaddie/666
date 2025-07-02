@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/model/SimpleType","sap/ui/model/ValidateException"],(e,a)=>{"use strict";return e.extend("email",{formatValue:function(e){return e},parseValue:function(e){return e},validateValue:function(e){let i=/^\w+[\w-+\.]*\@\w+([-\.]\w+)*\.[a-zA-Z]{2,}$/;if(!e.match(i)){throw new a("'"+e+"' is not a valid e-mail address")}}})});
+//# sourceMappingURL=EmailType.js.map

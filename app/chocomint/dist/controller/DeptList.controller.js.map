@@ -1,0 +1,1 @@
+{"version":3,"file":"DeptList.controller.js","names":["sap","ui","define","BaseController","router","extend","onInit","this","getOwnerComponent","getRouter"],"sources":["DeptList-dbg.controller.js"],"mappings":"AAAAA,IAAIC,GAAGC,OAAO,CAAC,8BAAgCC,IAC3C,aACA,IAAIC,EACJ,OAAOD,EAAeE,OAAO,gCAAiC,CAC1D,MAAAC,GACIF,EAASG,KAAKC,oBAAoBC,WACtC","ignoreList":[]}

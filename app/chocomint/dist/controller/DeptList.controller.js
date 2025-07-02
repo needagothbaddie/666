@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],e=>{"use strict";let t;return e.extend("chocomint.controller.DeptList",{onInit(){t=this.getOwnerComponent().getRouter()}})});
+//# sourceMappingURL=DeptList.controller.js.map

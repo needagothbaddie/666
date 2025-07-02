@@ -1,0 +1,74 @@
+:root {
+    --rose: #ee7f7e;
+    --dark-rose: #c45858;
+
+    --success-bg: hsl(143, 85%, 96%);
+    --success-border: hsl(145, 92%, 87%);
+    --success-text: hsl(140, 100%, 27%);
+
+    --error-bg: hsl(359, 100%, 97%);
+    --error-border: hsl(359, 100%, 94%);
+    --error-text: hsl(360, 100%, 45%);
+}
+
+#container-chocomint---App--Toolheader {
+    background-color: var(--rose) !important;
+}
+/* header styles */
+/* header button text color */
+[id^="container-chocomint---App--Btn"] {
+    color: white !important;
+}
+/* header title text */
+#container-chocomint---App--Tittle-inner {
+    color: white;
+}
+/* header button hover effect */
+span[id^="container-chocomint---App--Btn"]:hover {
+    background-color: var(--dark-rose) !important;
+}
+
+.float-right {
+    float: right;
+}
+
+.fit-container {
+    display: flex;
+    width: fit-content;
+}
+
+#container-chocomint---EmployeeFormView--FormEmpl--Grid-wrapperfor-container-chocomint---EmployeeFormView--EmplColButt--Grid {
+    display: flex;
+    width: fit-content;
+}
+
+.betterToastSucc {
+    font-size: 1rem;
+    gap: 0.75rem;
+    background: var(--success-bg);
+    border-color: var(--success-border);
+    color: var(--success-text);
+}
+
+.betterToastErr {
+    font-size: 1rem;
+    gap: 0.75rem;
+    background: var(--error-bg);
+    border-color: var(--error-border);
+    color: var(--error-text);
+}
+
+.iconAdded {
+    padding-left: 10px;
+    font-family: "SAP-icons";
+    padding: 10px;
+}
+
+.betterToastSucc::before {
+    content: "\e05b";
+    margin-right: 10px;
+}
+.betterToastErr::before {
+    content: "\e2a2";
+    margin-right: 10px;
+}
