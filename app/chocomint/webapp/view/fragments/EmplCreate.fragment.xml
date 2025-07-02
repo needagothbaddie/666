@@ -1,0 +1,29 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Dialog
+        title="Create an new Employee"
+        id="DialogCreateEmpl"
+        horizontalScrolling="false"
+    >
+        <content>
+            <core:Fragment fragmentName="chocomint.view.fragments.EmplUpdate" />
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button
+                    press="onBtnEmplCreate"
+                    text="Save"
+                    type="Accept"
+                />
+                <Button
+                    press="onBtnClose"
+                    text="Close"
+                    type="Transparent"
+                />
+            </Toolbar>
+        </footer>
+    </Dialog>
+</core:FragmentDefinition>

@@ -8,6 +8,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 
+import com.sap.cds.feature.xsuaa.XsuaaUserInfo;
 import com.sap.cds.ql.Select;
 import com.sap.cds.ql.Update;
 import com.sap.cds.ql.cqn.CqnSelect;
@@ -19,7 +20,6 @@ import com.sap.cds.services.handler.annotations.Before;
 import com.sap.cds.services.handler.annotations.On;
 import com.sap.cds.services.handler.annotations.ServiceName;
 import com.sap.cds.services.persistence.PersistenceService;
-import com.sap.cds.services.request.UserInfo;
 
 import cds.gen.MySelf;
 import cds.gen.myservice.CalSalaryContext;
@@ -88,16 +88,14 @@ public class MyServiceHandler implements EventHandler {
 
 	@On(event = "whoami")
 	public void whoami(WhoamiContext ctx) {
-		UserInfo userInfo = ctx.getUserInfo();
-		JwtTokenAuthenticationInfo authInfo = (JwtTokenAuthenticationInfo) ctx.getAuthenticationInfo();
+		JwtTokenAuthenticationInfo authInfo = ctx.getAuthenticationInfo().as(JwtTokenAuthenticationInfo.class);
+		XsuaaUserInfo userInfo = ctx.getUserInfo().as(XsuaaUserInfo.class);
 		List<String> roles = new ArrayList<String>(userInfo.getRoles());
 		// set result
 		MySelf me = MySelf.create();
-		me.setUsername(userInfo.getName());
+		me.setUsername(userInfo.getEmail());
 		me.setRole(roles);
-		Optional.ofNullable(authInfo)
-				.map(a -> a.getToken())
-				.ifPresent(me::setJwt);
+		me.setJwt(authInfo.getToken());
 
 		ctx.setResult(me);
 	}

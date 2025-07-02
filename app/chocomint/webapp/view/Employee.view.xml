@@ -1,0 +1,38 @@
+<mvc:View
+    controllerName="chocomint.controller.Employee"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+>
+    <Page
+        showHeader="false"
+        class="sapUiContentPadding"
+    >
+        <core:Fragment
+            fragmentName="chocomint.view.fragments.EmplUpdate"
+            type="XML"
+        />
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button
+                    id="BtnCreateEmpl"
+                    text="Save"
+                    icon="sap-icon://save"
+                    press="onSubmitForm"
+                    type="Emphasized"
+                    visible="{user>/isAdmin}"
+                />
+                <Button
+                    id="BtnCalSal"
+                    icon="sap-icon://money-bills"
+                    text="Calculate Salary"
+                    press="onCalculateSalary"
+                    visible="{user>/isAdmin}"
+                />
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

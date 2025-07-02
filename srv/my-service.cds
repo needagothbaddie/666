@@ -10,16 +10,16 @@ service MyService {
     action   calSalary(id : String) returns Double;
 };
 
-// annotate MyService with @(restrict: [
-//     {
-//         grant: 'READ',
-//         to   : 'ViewerJava'
-//     },
-//     {
-//         grant: '*',
-//         to   : 'AdminJava'
-//     },
-// ]);
+annotate MyService with @(restrict: [
+    {
+        grant: 'READ',
+        to   : 'ViewerJava'
+    },
+    {
+        grant: '*',
+        to   : 'AdminJava'
+    },
+]);
 
 type MySelf : {
     username : String;

@@ -36,7 +36,7 @@
           "org": "9dfc27f9trial",
           "space": "dev",
           "instance": "JavaAuth",
-          "key": "mykey"
+          "key": "my-key"
         },
         "kind": "xsuaa-auth",
         "vcap": {

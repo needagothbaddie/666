@@ -18,6 +18,10 @@ cds:
     sql.hana.search:
         fuzzy: true
         fuzzinessThreshold: 0.9
+    security:
+        xsuaa:
+            enabled: true
+            binding: JavaAuth
 ---
 management:
     endpoint:
@@ -37,5 +41,9 @@ management:
             enabled: true
         db:
             enabled: true
+---
+spring:
+    profiles:
+        active: default
 server:
     port: 4004

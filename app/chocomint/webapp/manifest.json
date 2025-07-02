@@ -1,117 +1,151 @@
 {
-  "_version": "1.65.0",
-  "sap.app": {
-    "id": "chocomint",
-    "type": "application",
-    "i18n": "i18n/i18n.properties",
-    "applicationVersion": {
-      "version": "0.0.1"
-    },
-    "title": "{{appTitle}}",
-    "description": "{{appDescription}}",
-    "resources": "resources.json",
-    "sourceTemplate": {
-      "id": "@sap/generator-fiori:basic",
-      "version": "1.18.1",
-      "toolsId": "a29cff27-966c-435c-82bf-e817e9f15a77"
-    },
-    "dataSources": {
-      "mainService": {
-        "uri": "/odata/v4/MyService/",
-        "type": "OData",
-        "settings": {
-          "annotations": [],
-          "odataVersion": "4.0"
+    "_version": "1.65.0",
+    "sap.app": {
+        "id": "chocomint",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:basic",
+            "version": "1.18.1",
+            "toolsId": "a29cff27-966c-435c-82bf-e817e9f15a77"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/odata/v4/MyService/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "odataVersion": "4.0"
+                }
+            }
         }
-      }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": false,
+        "dependencies": {
+            "minUI5Version": "1.136.2",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "chocomint.i18n.i18n"
+                }
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "controlAggregation": "pages",
+                "controlId": "app",
+                "transition": "slide",
+                "type": "View",
+                "viewType": "XML",
+                "path": "chocomint.view",
+                "async": true,
+                "viewPath": "chocomint.view"
+            },
+            "routes": [
+                {
+                    "name": "EmplList",
+                    "pattern": "",
+                    "target": ["TargetList"]
+                },
+                {
+                    "name": "EmplDetail",
+                    "pattern": "employee/{id}",
+                    "target": ["TargetEmplDetail"]
+                },
+                {
+                    "name": "DeptList",
+                    "pattern": "departments",
+                    "target": ["TargetDeptList"]
+                },
+                {
+                    "name": "RoleList",
+                    "pattern": "roles",
+                    "target": ["TargetRoleList"]
+                },
+                {
+                    "pattern": ":all*:",
+                    "name": "NotFound",
+                    "target": "Target404"
+                }
+            ],
+            "targets": {
+                "TargetList": {
+                    "id": "EmplList",
+                    "name": "EmplList"
+                },
+                "TargetEmplDetail": {
+                    "id": "Employee",
+                    "name": "Employee"
+                },
+                "TargetDeptList": {
+                    "id": "DeptList",
+                    "name": "DeptList"
+                },
+                "TargetRoleList": {
+                    "id": "RoleList",
+                    "name": "RoleList"
+                },
+                "Target404": {
+                    "id": "404",
+                    "name": "404"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "chocomint.view.App",
+            "type": "XML",
+            "id": "App",
+            "async": true
+        }
     }
-  },
-  "sap.ui": {
-    "technology": "UI5",
-    "icons": {
-      "icon": "",
-      "favIcon": "",
-      "phone": "",
-      "phone@2": "",
-      "tablet": "",
-      "tablet@2": ""
-    },
-    "deviceTypes": {
-      "desktop": true,
-      "tablet": true,
-      "phone": true
-    }
-  },
-  "sap.ui5": {
-    "flexEnabled": true,
-    "dependencies": {
-      "minUI5Version": "1.136.2",
-      "libs": {
-        "sap.m": {},
-        "sap.ui.core": {}
-      }
-    },
-    "contentDensities": {
-      "compact": true,
-      "cozy": true
-    },
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "chocomint.i18n.i18n"
-        }
-      },
-      "": {
-        "dataSource": "mainService",
-        "preload": true,
-        "settings": {
-          "operationMode": "Server",
-          "autoExpandSelect": true,
-          "earlyRequests": true
-        }
-      }
-    },
-    "resources": {
-      "css": [
-        {
-          "uri": "css/style.css"
-        }
-      ]
-    },
-    "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "controlAggregation": "pages",
-        "controlId": "app",
-        "transition": "slide",
-        "type": "View",
-        "viewType": "XML",
-        "path": "chocomint.view",
-        "async": true,
-        "viewPath": "chocomint.view"
-      },
-      "routes": [
-        {
-          "name": "RouteView1",
-          "pattern": ":?query:",
-          "target": [
-            "TargetView1"
-          ]
-        }
-      ],
-      "targets": {
-        "TargetView1": {
-          "id": "View1",
-          "name": "View1"
-        }
-      }
-    },
-    "rootView": {
-      "viewName": "chocomint.view.App",
-      "type": "XML",
-      "id": "App",
-      "async": true
-    }
-  }
 }
